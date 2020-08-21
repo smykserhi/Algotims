@@ -21,7 +21,7 @@ ul{
 }
 
 .highlight{
-  border: 1;
+  border: 1; 
 }
 
 .social-media-contact a::after{
@@ -156,7 +156,7 @@ ul{
   padding: 2px 16px;
   color: white;
 }
-
+/*Image galery*/
 img.demo {
   opacity: 0.6;
 }
@@ -183,36 +183,14 @@ img.hover-shadow {
 .jumbotron{  
   background: linear-gradient(0deg,#fff,transparent), url(./media/beck1-min.jpg) no-repeat center;
 }
+/*footer*/
 footer{
   /* background: rgb(255,255,255); */
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%,  rgba(108,117,125,0.7) 100%);
 }
 
 /* -------Animation---------- */
-.instagram:hover {
-	-webkit-animation: rotate-center 0.6s ease-in-out both;
-	        animation: rotate-center 0.6s ease-in-out both;
-}
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
+
 .vibrate-1:hover {
 	-webkit-animation: vibrate-1 0.3s linear infinite both;
 	        animation: vibrate-1 0.3s linear infinite both;
@@ -244,10 +222,11 @@ footer{
             transform: translate(0);
   }
 }
+/* Nav bar */
 .nav-link:hover{
  transform: scale(1.2);
 }
-/* Poper style*/
+/* Popper style*/
 #tooltip ,
 #tooltip1{
   background: #17a2b8;
@@ -282,18 +261,15 @@ footer{
     right: 0px;
   }
 
-  #tooltip[data-popper-placement^='right'] > #arrow,
-  #tooltip1[data-popper-placement^='right'] > #arrow {
+  #tooltip[data-popper-placement^='right'] > #arrow {
     left: -8px;
   }
-  #tooltip,
-  #tooltip1 {
+  #tooltip {
     /* ... */
     display: none;
   }
 
-  #tooltip[data-show],
-  #tooltip1[data-show] {
+  #tooltip[data-show] {
     display: block;
   }
   /* #tooltip[data-popper-placement^='right'] > #arrow {
