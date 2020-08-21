@@ -8,57 +8,88 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="my.css">
-    <title></title>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <title>DATA STRUCTURE</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    
+    <!-- Navigatio bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light pl-5">      
+      <img src="https://placeimg.com/200/200/people" width="3%"  class="img-fluid ml-5 rounded-circle" alt="Responsive image">
+      <a class="navbar-brand ml-3" href="#">DATA STRUCTURE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Linear search <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Linked list</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Stack</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              More DS 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Tree</a>
+              <a class="dropdown-item" href="#">Queue</a>
+              <a class="dropdown-item" href="#">Benary Tree</a>
+            </div>
           </li>
-        </ul>
+        </ul>      
       </div>
+      <div>
+        <a class="navbar-brand align-self-end mr-5 pr-5" href="#"  data-toggle="modal" data-target="#subscribe">Subscribe</a>
+      </div>
+   
     </nav>
-    <div class='container'>
-      <div class="text-center">
-        <h1>DATA STRUCTURE</h1>
-        <p>
-          A data structure is a particular way of organizing data in a computer so that it can be used effectively.
-        </p>
-        <div class="row">
-          <div class="col">
-            <h2>Some Sorting Algorithm</h2>
-            <div>
-              <ul>
-                <li>Bubble Sort: repeatedly swapping the adjacent elements if they are in wrong order</li>
-                <li>Selection Sort: sort algorithm sorts an array by repeatedly finding the minimum element</li>
-                <li>Insertion Sort: Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands</li>
-                <li>Quick Sort: Divide and Conquer algorithm. It picks an element as pivot</li>
-                <li>Merge Sort: It divides input array in two halves, calls itself for the two halves and then merges the two sorted halves.</li>
-              </ul>
-              <button type="button" class="btn btn-info">More Sorting Algoritms</button>
-              <div>
-                Vidoo here
+    <!-- Main content --> 
+    <div class="jumbotron jumbotron-fluid text-center">
+          <div class='container mb-5'>
+            <div class="text-center mt-5 ">
+              <div class="topContent my-5 py-5">
+                <h1 class="display-1 my-3">DATA STRUCTURE</h1>
+                <p class="font-weight-bolder">
+                  A data structure is a particular way of organizing data in a computer so that it can be used effectively.
+                </p>                
               </div>
             </div>
           </div>
-          <div class="col">
-            <h2>What is DS?</h2>>
-            <img src="..." class="img-fluid" alt="Responsive image">
+    </div>
+    <section class="container text-center mainContent">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 col-md-6	">
+            <h3>Some Sorting Algorithm</h3>
+            <div>
+              <ul class="border border-secondary rounded pl-0" >
+                <li class="border-bottom border-secondary  px-3 py-3"><b>Bubble Sort:</b> repeatedly swapping the adjacent elements if they are in wrong order</li>
+                <li class="border-bottom border-secondary  px-3 py-3"><b>Selection Sort:</b> sort algorithm sorts an array by repeatedly finding the minimum element</li>
+                <li class="border-bottom border-secondary  px-3 py-3"><b>Insertion Sort:</b> Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands</li>
+                <li class="border-bottom border-secondary  px-3 py-3"><b>Quick Sort:</b> Divide and Conquer algorithm. It picks an element as pivot</li>
+                <li class="px-3 py-3"><b>Merge Sort:</b> It divides input array in two halves, calls itself for the two halves and then merges the two sorted halves.</li>
+              </ul>
+              <button id="buttonMore" aria-describedby="tooltip" type="button" class="btn btn-info "><h3 class="mx-3" data-toggle="modal" data-target="#runtime">More Sorting Algoritms</h3></button>
+              <!-- <button id="button" aria-describedby="tooltip">My button</button> -->
+              <div id="tooltip" role="tooltip">
+                  <div id="arrow" data-popper-arrow></div> 
+                  Click it                            
+              </div>
+              <div class="embed-responsive embed-responsive-16by9 mt-3">
+               <video  src="./media/bubble-sort.mov"  type="video/mov" controls >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 col-md-6	">
+            <h3>What is DS?</h3>
+            <div>
+              <img src="https://placeimg.com/640/480/people/grayscale" class="img-fluid rounded mb-3" alt="Responsive image">
+            </div>
+            
             <p>In computer science, a data structure is a data organization, management, and storage format that enables efficient access and modification. More precisely, 
               a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data
               Data structures are generally based on the ability of a computer to fetch and store data at any place in its memory, specified by a pointer—a 
@@ -70,81 +101,317 @@
               operations (including their space and time cost)
               </p>
           </div>
-          <div class="col">
-            <h2>Searching Algorithms</h2>
+          <div class="col-lg-4 col-sm-12 col-md-6	">
+            <h3>Searching Algorithms</h3>
             <div>
-              <ul> 
-                  <li>
-                    <h5>Binary Search</h5>
-                    <div>
-                      <div>time complexity</div>
-                      <div>O(Log n)</div>
+              <ul class="border border-secondary rounded pl-0" >
+                  <li  class="border-bottom border-secondary py-3 ">
+                    <h5 class="text-left pl-3"><b>Binary Search</b></h5>
+                    <div class="d-flex justify-content-between px-3">
+                      <div class="">time complexity</div>
+                      <button id="buttonMore1" aria-describedby="tooltip" class="btn btn-info rounded-pill py-0 vibrate-1" data-toggle="modal" data-target="#runtime">O(Log n)</button>
+                      <div id="tooltip1" role="tooltip">
+                        <div id="arrow" data-popper-arrow></div> 
+                        Click it                            
+                    </div>
                     </div>
                   </li>
-                  <li>
-                    <h5>Jump Search</h5>
-                    <div>
+                  <li class="border-bottom border-secondary py-3">
+                    <h5 class="text-left pl-3"><b>Jump Search</b></h5>
+                    <div class="d-flex justify-content-between px-3 ">
                       <div>time complexity</div>
-                      <div>( O(n) - O(Log n) )</div>
+                      <button class="btn btn-info rounded-pill py-0  vibrate-1"   data-toggle="modal" data-target="#runtime">( O(n) - O(Log n) )</button>
+                     
                     </div>
                   </li>
-                  <li>
-                    <h5>Linear Search</h5>
-                    <div>
+                  <li class="border-bottom border-secondary py-3 ">
+                    <h5 class="text-left pl-3"><b>Linear Search</b></h5>
+                    <div class="d-flex justify-content-between px-3">
                       <div>time complexity</div>
-                      <div>O(n)</div>
+                      <button class="btn btn-info rounded-pill py-0  vibrate-1" data-toggle="modal" data-target="#runtime">O(n)</button>
+                      
                     </div>
                   </li>
-                  <li>
-                    <h5>Interpolation Search</h5>
-                    <div>
+                  <li class="border-bottom border-secondary py-3 ">
+                    <h5 class="text-left pl-3"><b>Interpolation Search</b></h5>
+                    <div class="d-flex justify-content-between px-3">
                       <div>time complexity</div>
-                      <div>O(√n)</div>
+                      <button class="btn btn-info rounded-pill py-0  vibrate-1" data-toggle="modal" data-target="#runtime">O(√n)</button>
                     </div>
                   </li>
-                  <li>
-                    <h5>Exponential Search</h5>
-                    <div>
+                  <li class="border-bottom border-secondary py-3 ">
+                    <h5 class="text-left pl-3"><b>Exponential Search</b></h5>
+                    <div class="d-flex justify-content-between px-3">
                       <div>time complexity</div>
-                      <div>Exponential Search</div>
+                      <button class="btn btn-info rounded-pill py-0 vibrate-1" data-toggle="modal" data-target="#runtime">O(Log n)</button>
                     </div>
                   </li>
-                  <li>
-                    <h5>Fibonacci Search</h5>
-                    <div>
+                  <li class=" my-3 ">
+                    <h5 class="text-left pl-3"><b>Fibonacci Search</b></h5>
+                    <div class="d-flex justify-content-between px-3">
                       <div>time complexity</div>
-                      <div>O(log(n))</div>
+                      <button class="btn btn-info rounded-pill py-0 vibrate-1" data-toggle="modal" data-target="#runtime">O(log(n))</button>
                     </div>
                   </li>
                 </ul>
             </div>
             <div>
               <h3>Gallery</h3>
-              <div>Galery here</div>
+              <div>
+                <img src="https://placeimg.com/640/480/animals" class="img-fluid rounded mb-3 hover-shadow" onclick="openModal();currentSlide(4)"  alt="Responsive image">
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      
-    </div>
-    <footer class="text-center mt-auto">
-      <ul>
-        <li>instagram</li>
-        <li>facebook</li>
-        <li>Twiter</li>          
-      </ul>
+         
+    </section>      
+    <!-- Footer -->
+    <footer class="text-center mt-auto social-media-contact bg-secondary  pt-3">     
+        <a class="instagram" href="#"></a>
+        <a class="facebook" href="#"></a>
+        <a class="twitter" href="#"></a>
       <div>
-        <p>Data structure</p>
-        <p>Phone: (123) 4567890</p>
+        <span class="mb-2">Data structure</span> 
+        <p class="pb-3">Phone: (123) 4567890</p>
       </div>
+     
     </footer>
+    <!-- The Modal/Lightbox Halery -->
+    <div id="myModal" class="modal1">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+
+        <div class="mySlides ">
+          <div class="numbertext">1 / 4</div>
+          <img src="https://placeimg.com/640/480/animals" style="width:100%; "  >
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="https://placeimg.com/640/480/nature" style="width:100%; " >
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="https://placeimg.com/640/480/tech" style="width:100%; " >
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="https://placeimg.com/640/480/arch" style="width:100%; " >
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="galery">
+          <div class="column">
+            <img class="demo" width="100%"  src="https://placeimg.com/640/480/animals/grayscale" onclick="currentSlide(1)" alt="animals">
+          </div>
+
+          <div class="column">
+            <img class="demo" width="100%"  src="https://placeimg.com/640/480/nature/grayscale" onclick="currentSlide(2)" alt="Nature">
+          </div>
+
+          <div class="column">
+            <img class="demo" width="100%"  src="https://placeimg.com/640/480/tech/grayscale" onclick="currentSlide(3)" alt="Tech">
+          </div>
+
+          <div class="column">
+            <img class="demo" width="100%"  src="https://placeimg.com/640/480/arch/grayscale" onclick="currentSlide(4)" alt="Arch">
+          </div>
+      </div>
+      </div>
+    </div>
+     <!-- Modal subscribe -->
+     
+      <div class="modal fade" id="subscribe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">            
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Subscribe</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            
+            <div class="modal-body">
+              <form action="index.html" class="needs-validation" novalidate>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Name</span>
+                  </div>
+                  <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please enter your email
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Email</span>
+                  </div>
+                  <input type="email" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please enter your email
+                  </div>
+                </div>       
+                <div>
+                  <button class="btn btn-info" type="submit" >Subscribe</button>
+                </div>
+              </form>
+              <!-- <form class="needs-validation" novalidate>
+              
+              <div >
+                <button type="submit" class="btn btn-info" data-dismiss="modal">Subscribe</button>            
+              </div>
+            </form> -->
+            </div>
+            
+          
+          </div>
+        </div>
+      </div>
+    
+    <!-- Modal time examples -->
+  <div class="modal fade" id="runtime" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Runtime for algorithms</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Algorithms</th>
+                <th scope="col">10</th>
+                <th scope="col">100</th>
+                <th scope="col">1k</th>
+                <th scope="col">10k</th>
+                <th scope="col">Best case</th>
+                <th scope="col">Worst case</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Insertion sort</th>
+                <td>0.0818</td>
+                <td>6.831</td>
+                <td>757.851</td>
+                <td>77713.30</td>
+                <td>2.351</td>
+                <td>1615.53</td>
+              </tr>
+              <tr>
+                <th scope="row">Bubble sort</th>
+                <td>0.0866</td>
+                <td>14.440</td>
+                <td>1382.405</td>
+                <td>140627.75</td>
+                <td>0.772</td>
+                <td>2224.58</td>
+              </tr>
+              <tr>
+                <th scope="row">Selection sort</th>
+                <td>0.0690</td>
+                <td>6.453</td>
+                <td>507.285</td>
+                <td>46800.13</td>
+                <td>493.901</td>
+                <td>479.04</td>
+              </tr>
+              <tr>
+                <th scope="row">Shell sort</th>
+                <td>0.0914</td>
+                <td>1.864</td>
+                <td>28.038</td>
+                <td>446.30</td>
+                <td>14.264</td>
+                <td>33.47</td>
+              </tr>
+              <tr>
+                <th scope="row">Merge sort</th>
+                <td>0.0964</td>
+                <td>2.836</td>
+                <td>34.649</td>
+                <td>491.92</td>
+                <td>16.687</td>
+                <td>20.06</td>
+              </tr>
+              <tr>
+                <th scope="row">Quick sort</th>
+                <td>0.1115</td>
+                <td>2.211</td>
+                <td>26.759</td>
+                <td>907.6</td>
+                <td>96.938</td>
+                <td>691.21</td>
+              </tr>
+              <tr>
+                <th scope="row">Heap sort</th>
+                <td>0.1986</td>
+                <td>4.872</td>
+                <td>67.710</td>
+                <td>1887.41</td>
+                <td>70.57</td>
+                <td>72.84</td>
+              </tr>
+              <tr>
+                <th scope="row">Bin sort</th>
+                <td>0.1658</td>
+                <td>1.592</td>
+                <td>31.607</td>
+                <td>1585.52</td>
+                <td>28.659</td>
+                <td>28.42</td>
+              </tr>
+              <tr>
+                <th scope="row">Radix sort</th>
+                <td>0.4119</td>
+                <td>3.206</td>
+                <td>16.881</td>
+                <td>276.77</td>
+                <td>16.948</td>
+                <td>16725</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button " class="btn btn-info" data-dismiss="modal">Close</button>          
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal -->
+   
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
     <script type="text/javascript" src ="./js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+   
   </body>
 </html>
